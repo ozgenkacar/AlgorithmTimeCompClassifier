@@ -1,7 +1,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Algorithm Time Complexity Classifier</title>
+    <title>Algorithm Hunter</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -26,19 +26,24 @@
         <label for="codeInput"></label>
     </div>
     <div>
-        <textarea class="textarea" spellcheck="false" id="codeInput" rows=5 cols="5" placeholder="write codes to get started"></textarea>
-   
+        <textarea class="textarea" spellcheck="false" id="codeInput" rows=5 cols="5" placeholder="Copy the codes from ReadME file to get started"></textarea>
+    </div>
+    <a href="../ReadME.md">Read ME for your reference: HTML does not render MD extension, so remove all #s</a>
+    <div>
+
     </div>
     <div>
-        <button id="RunButton">Evaluate my code</button>
+        <button id="getBigOBtn">Evaluate my code</button>
 
         <h2>Result:
-            <h2 id="resultText"></h2>
+            <h2 id="resultShow"></h2>
         </h2>
 
     </div>
 
 
+    <footer>Disclaimer: Algorithm Hunter can only calculate popular for loop statements for your reference. Shoot a PR if you like to be part of the team.
+    </footer>
 
     <script src="evaluator.js"></script>
     <script src="index.js"></script>
