@@ -1,13 +1,8 @@
 const comparisonOperators = [">", "<", ">=", "<=", "==", "!="]
 const operations = ["+=", "-=", "/=", "*=", "++", "--", "="]
-// const arithOperations = ["+", "-", "/", "*"]
 
 
-/* 
-    Sort the Big O strings by given criteria:
-        1. Total count of N's in the string
-        2. Total count of logN's in the string
-*/
+
 
 function getBiggestBigOString(bigOStrings) {
 
@@ -39,12 +34,12 @@ function getBiggestBigOString(bigOStrings) {
     }
 
 
-    // Base case: Stop the iteration if there is only 1 N string
+    
     if (topBigNStrings.length === 1) {
         return topBigNStrings[0];
     }
 
-    // check  if there is more N strings in the next iterations
+    
     let maxLsIndex = 0;
     let maxLsCount = 0;
     for (var i = 0; i < topBigNStrings.length; i++) {
@@ -71,7 +66,7 @@ function translateBigOStringToBigO(bigOString) {
     let nCount = 0;
     let lCount = 0;
 
-    // console.log("Big O character " + bigOString);
+  
 
     for (var i = 0; i < bigOString.length; i++) {
         const c = bigOString[i];
@@ -107,9 +102,6 @@ function translateBigOStringToBigO(bigOString) {
 }
 
 
-/* 
-    This function should strip out all the for statements in the code
-*/
 function getForStatements(linesOfCode) {
     let forStatements = [];
     let level = 1;
@@ -124,12 +116,12 @@ function getForStatements(linesOfCode) {
             }
             forStatements.push(lineObj);
 
-            // up the level because we are now within the for loop
+            
             level += 1;
         }
 
         if (isClosingStatement > -1) {
-            // down the level because we are now out of a for loop
+            
             level -= 1;
         }
     });
@@ -173,11 +165,11 @@ function evaluateForStatement(forLine) {
     let range = forLineLogic[1];
     let operation = forLineLogic[2].split(")")[0];
 
-    // read init value
+    
     let initValue = varInstantiation.split("=");
     initValue = initValue[initValue.length - 1];
 
-    // read range stop
+    
     let rangeStop;
     for (var i = 0; i < comparisonOperators.length; i++) {
         let op = comparisonOperators[i];
@@ -188,16 +180,13 @@ function evaluateForStatement(forLine) {
         }
     }
 
-    // read operation
+    
     let operationDone;
     for (var i = 0; i < operations.length; i++) {
         let op = operations[i];
         if (operation.indexOf(op) > -1) {
             if (op === "=") {
-                // a little more complex
-                // ensure right side format is => variable op val
-
-                // this is just a use case that has too many variables.
+               
                 operationDone = "lazy"
 
             } else {
@@ -212,7 +201,7 @@ function evaluateForStatement(forLine) {
                     }
                 }
                 if (op === "+=" || op === "-=") {
-                    // ensure right side is numeric and > 0
+                    
                     let operationSplit = operation.split(op);
                     let leftLex = operationSplit[0];
                     let rightLex = operationSplit[1];
@@ -238,8 +227,7 @@ function evaluateForStatement(forLine) {
                 }
 
                 if (op === "*=" || op === "/=") {
-                    // ensure right side is numeric and > 1
-                    // ensure right side is numeric and > 0
+                    
                     let operationSplit = operation.split(op);
                     let leftLex = operationSplit[0];
                     let rightLex = operationSplit[1];
@@ -279,7 +267,7 @@ function evaluateForStatement(forLine) {
 function getBigONotation(forStatements) {
     const val_results = [];
     forStatements.forEach(forLine => {
-        // evaluate the notation of the for loop
+        
         let r = evaluateForStatement(forLine);
         val_results.push(r);
     })
