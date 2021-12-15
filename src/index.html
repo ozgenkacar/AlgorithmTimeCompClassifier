@@ -1,0 +1,45 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Algorithm Time Complexity Classifier</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Algorithm Hunter Big O Notation calculator!</h1>
+    <p class="paragraph">Type your code below and select the corresponding language from the dropdown it will calculate the Big O time complexity</p>
+    <p></p>
+    <div>
+        <label for="languageOption">Choose language </label>
+        <select id="languageOption">
+            <option>Java</option>
+            <option>C</option>
+            <option>C++</option>
+            <option>Python</option>
+            <option>C#</option>
+            <option>Javascript</option>
+            <option>Swift</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="codeInput"></label>
+    </div>
+    <div>
+        <textarea class="textarea" spellcheck="false" id="codeInput" rows=5 cols="5" placeholder="write codes to get started"></textarea>
+   
+    </div>
+    <div>
+        <button id="RunButton">Evaluate my code</button>
+
+        <h2>Result:
+            <h2 id="resultText"></h2>
+        </h2>
+
+    </div>
+
+
+
+    <script src="classifier.js"></script>
+    <script src="index.js"></script>
+</body>
