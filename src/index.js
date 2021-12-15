@@ -2,7 +2,7 @@
 
 
 
-const getBigOBtn = document.getElementById("getBigOBtn");
+const getBigOBtn = document.getElementById("RunButton");
 getBigOBtn.onclick = function() {
     const codeInput = document.getElementById("codeInput");
     const code = codeInput.value.trim();
@@ -11,7 +11,7 @@ getBigOBtn.onclick = function() {
     const result = parseInput(code);
 
     // set the result
-    const resultShow = document.getElementById("resultShow");
+    const resultShow = document.getElementById("resultText");
     resultShow.innerHTML = result;
 }
 
