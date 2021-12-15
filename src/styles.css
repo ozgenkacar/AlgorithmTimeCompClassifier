@@ -4,7 +4,7 @@
 
 body{
     display: grid;
-    font-family: Arial, fantasy ;
+    font-family: Verdana SansSerif, fantasy ;
     grid-template-columns: auto;
     justify-content: center;
     margin: 100px;
@@ -18,18 +18,18 @@ body{
 }
 
 h1 {
-  color: red;
+  color: blue;
 }
 h1:hover{
-    color: blue;
+    color: red;
 }
 
 .paragraph:hover{
-    color: black;
+    color: red;
 }
 
 #getBigOBtn:hover{
-    background: yellow;
+    background: greenyellow;
 }
 
 /* For mobile phones: */
