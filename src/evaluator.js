@@ -34,12 +34,10 @@ function getBiggestBigOString(bigOStrings) {
     }
 
 
-    
     if (topBigNStrings.length === 1) {
         return topBigNStrings[0];
     }
 
-    
     let maxLsIndex = 0;
     let maxLsCount = 0;
     for (var i = 0; i < topBigNStrings.length; i++) {
@@ -65,8 +63,6 @@ function getBiggestBigOString(bigOStrings) {
 function translateBigOStringToBigO(bigOString) {
     let nCount = 0;
     let lCount = 0;
-
-  
 
     for (var i = 0; i < bigOString.length; i++) {
         const c = bigOString[i];
@@ -100,6 +96,7 @@ function translateBigOStringToBigO(bigOString) {
 
     return "O(" + res + ")";
 }
+
 
 
 function getForStatements(linesOfCode) {
@@ -186,7 +183,7 @@ function evaluateForStatement(forLine) {
         let op = operations[i];
         if (operation.indexOf(op) > -1) {
             if (op === "=") {
-               
+             
                 operationDone = "lazy"
 
             } else {
