@@ -10,7 +10,7 @@ dropdown.onchange = function() {
 
 
 // when button is clicked, gets the text from the text area:
-const getBigOBtn = document.getElementById("RunButton");
+const getBigOBtn = document.getElementById("getBigOBtn");
 getBigOBtn.onclick = function() {
     const codeInput = document.getElementById("codeInput");
     const code = codeInput.value.trim();
@@ -19,7 +19,7 @@ getBigOBtn.onclick = function() {
     const result = parseInput(code);
 
     // set the result
-    const resultShow = document.getElementById("resultText");
+    const resultShow = document.getElementById("resultShow");
     resultShow.innerHTML = result;
 }
 
@@ -34,3 +34,4 @@ function parseInput(code) {
     let result = getBigONotation(forStatements);
     return result;
 }
+
